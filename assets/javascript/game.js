@@ -3,6 +3,7 @@ var userWins = 0;
 var userLoses = 0;
 var guessesRemaining = 10;
 var userGuess;
+//hard coded for testing purposes
 var machineGuess = "cat";
 var guessArray = [];
 var keyPress;
@@ -17,25 +18,27 @@ function keyPress()
         guessesRemaining = guessesRemaining - 1;
     }
 
-
+//function that recognizes user's key press and adds them to an array.
 function addToarray()
     {
         guessArray.push(event.key);
         document.getElementById("p.guessedletters").innerHTML = guessArray;
     }
 
-
+//function that recognizes user's key press and prints the correct guesses.
 function addTocorrect()
     {
         document.getElementById("p.correctletters").innerHTML = guessArray;
     }
 
+//function that recognizes user's key press and states the user's key press.
 function captureGuess()
     {
         var userGuess = guessArray;
         console.log("User guess is: " + userGuess);
     }
 
+//function that checks the guessed key presses against the machine's word.
 function wordChecker()
     {
         for (i = 0; i < 1; i++)
@@ -61,36 +64,4 @@ function wordChecker()
                     alert("Nope! Try again");
                 }
             }
-    }   
-
-
-
-//For loop that keeps the keyPress function running.
-//for (i = 0; i < 5; i++)
- 
-
-//document.onkeyup = function(event)
-//{
-    //userGuesses = event.key;
-// checks if the letter exists inside of the word and if it does... 
-    //if (randomWord.indexOf(userGuesses)>-1)
-    //{
-      //for(var i=0; i < randomWord.length; i++)
-      //{
-       //if (randomWord[i] == userGuesses)
-       //{
-           //underScores[i]= userGuesses;
-           //console.log(underScores);
-           //winCounter++;
-           //winLose();
-       //}
-      //}
-    //}
-    //else 
-    //{
-    //wrongAnswer.push(userGuesses);
-    //guessesLeft--;
-    //console.log(wrongAnswer);
-    //winLose();
-    //}
-//}
+    }
