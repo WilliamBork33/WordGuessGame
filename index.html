@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WordGuessGame</title>
+
+    <!-- Linking style sheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Linking jQuery -->
+<script type="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+
+</head>
+<body>
+
+    <!-- Row for game title -->
+    <div id="titlerow" class="row">
+        <div id="gametitle" class="col-lg text-center">
+            <h1>Psychic Game</h1>
+        </div>
+    </div>     
+    
+    <hr>
+
+    <!-- Row for game instructions -->
+    <div id="instructionsrow" class="row">
+        <div id="gameinstructions" class="col-lg text-center" >
+            <h1>Guess the word: "cat" or "dog"??? Type into the box to guess the letter!</h1>
+            <!-- Key press input box that runs the below function -->
+            <input id="input" type="textbox" size="100" onkeypress="keyPress(), captureGuess(), addToarray(), addTocorrect(), wordChecker()">
+            <hr/>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Row for correctly guessed letters -->
+    <div id="correctrow" class="row">
+            <div id="correctletters" class="col-lg text-center">
+                <h1>Correctly Guessed Letters: </h1>
+                <p id="p.correctletters">...</p>
+            </div>
+        </div>
+
+    <hr>
+
+    <!-- Row for guessed letters -->
+    <div id="guessedrow" class="row">
+        <div id="guessedletters" class="col-lg text-center">
+            <h1>Letters Already Guessed: </h1>
+            <p id="p.guessedletters">...</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Row for wins -->
+    <div id="winsrow" class="row">
+        <div id="wins" class="col-lg text-center">
+            <h1>Your Wins!</h1>
+            <p id="p.yourwins">0</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Row for losses -->
+    <div id="lossesrow" class="row">
+        <div id="losses" class="col-lg text-center">
+            <h1>Your Losses!</h1>
+            <p id="p.yourlosses">0</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Row for remaining guesses -->
+    <div id="guessesrow" class="row">
+        <div id="guessnumber" class="col-lg text-center">
+            <h1>Remaining Guesses...</h1>
+            <p id="p.guessnumber">10</p>
+        </div>
+    </div>
+    
+
+
+<!-- Linking javascript -->
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
+</body>
+</html>
